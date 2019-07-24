@@ -1,4 +1,4 @@
-				Solid Pinciple Task
+				Solid Principle Task
 Consider an insurance system that validates health insurance claims before approving one. The
 process is as follows:
 A customer of the company files a claim
