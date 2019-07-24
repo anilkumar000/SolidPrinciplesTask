@@ -4,6 +4,7 @@ public class Customer {
     private int custId;
     private String custName;
     private Insurance insurance;
+    public Claim freshClaim;
 
 
     public int getCustId() {
@@ -32,15 +33,15 @@ public class Customer {
 
 
 
-    public Customer(int custId, String custName,String typeOfInsurance) {
+    public Customer(int custId, String custName,Boolean isClaimed) {
         this.custId = custId;
         this.custName = custName;
-        this.insurance=new Insurance(getCustId(),getCustId(),typeOfInsurance);
+        this.insurance=new Insurance(getCustId(),getCustId(),isClaimed);
     }
 
 
     public Claim raisingClaim(){
-        Claim freshClaim=new Claim(getInsurance());
+        freshClaim=new Claim(getInsurance());
         return freshClaim;
 
     }
