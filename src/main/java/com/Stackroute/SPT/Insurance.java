@@ -50,10 +50,10 @@ public class Insurance {
 
 
 
-    public Insurance(int insuranceId, int custId,boolean isClaimed) {
+    public Insurance(int insuranceId, int custId) {
         this.insuranceId = insuranceId;
         this.custId = custId;
-        this.isClaimed = isClaimed;
+        this.isClaimed = false;
     }
 
 }

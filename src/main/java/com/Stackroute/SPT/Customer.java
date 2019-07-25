@@ -33,10 +33,10 @@ public class Customer {
 
 
 
-    public Customer(int custId, String custName,Boolean isClaimed) {
+    public Customer(int custId, String custName) {
         this.custId = custId;
         this.custName = custName;
-        this.insurance=new Insurance(getCustId(),getCustId(),isClaimed);
+        this.insurance=new Insurance(getCustId(),getCustId());
     }
 
 

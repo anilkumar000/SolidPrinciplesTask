@@ -14,10 +14,10 @@ public class HealthInsuranceSystem {
         System.out.println("Enter your Name:");
         Scanner inputName=new Scanner(System.in);
         custName=inputId.next();
-        System.out.println("Is your Insurance Claimed:");
-        Scanner inputStatus=new Scanner(System.in);
-        custStatus=inputId.nextBoolean();
-        Customer customer=new Customer(custid,custName,custStatus);
+//        System.out.println("Is your Insurance Claimed:");
+//        Scanner inputStatus=new Scanner(System.in);
+//        custStatus=inputId.nextBoolean();
+        Customer customer=new Customer(custid,custName);
         InsuranceSurveyor insuranceSurveyor=new InsuranceSurveyor();
         ClaimManager claimManager=new ClaimManager();
 
@@ -26,7 +26,9 @@ public class HealthInsuranceSystem {
         System.out.println("Is approved by Surveyor: "+customer.freshClaim.getApprovedBySurveyor());
         if (customer.freshClaim.getApprovedBySurveyor()) {
             claimManager.approvingClaim(customer.raisingClaim());
-            System.out.println("Is approved by Manager: " + customer.freshClaim.getApprovedBySurveyor());
+            System.out.println("Is approved by Manager: " + customer.freshClaim.getApprovedByManager());
+            customer.getInsurance().setClaimed(true);
+            System.out.println("Is Claimed"+customer.getInsurance().isClaimed());
         }
     }
 }
